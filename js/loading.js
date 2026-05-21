@@ -1,4 +1,8 @@
 (function () {
+  var logoSrc = document.currentScript
+    ? document.currentScript.src.replace(/\/js\/loading\.js[\s\S]*$/, '/images/common/logo.png')
+    : 'images/common/logo.png';
+
   if (sessionStorage.getItem('loaded')) return;
   sessionStorage.setItem('loaded', '1');
 
@@ -12,7 +16,7 @@
       '<div class="loading__wrap">' +
         '<div class="loading__ring loading__ring--1" id="lr1"></div>' +
         '<div class="loading__ring loading__ring--2" id="lr2"></div>' +
-        '<img class="loading__logo" id="llogo" src="/images/logo_背景透過.png" alt="at mark">' +
+        '<img class="loading__logo" id="llogo" src="' + logoSrc + '" alt="at mark">' +
       '</div>' +
       '<p class="loading__brand" id="lbrand">atmark</p>';
 
