@@ -27,4 +27,16 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeMenu();
   });
+
+  /* ---- ドロワー内 STORE アコーディオン ---- */
+  var storeBtn = document.querySelector('.nav__drawer-store-btn');
+  var storeSub = document.querySelector('.nav__drawer-sub');
+  if (storeBtn && storeSub) {
+    storeBtn.addEventListener('click', function () {
+      var isOpen = storeBtn.getAttribute('aria-expanded') === 'true';
+      storeBtn.setAttribute('aria-expanded', String(!isOpen));
+      storeSub.classList.toggle('is-open', !isOpen);
+      storeBtn.querySelector('.nav__drawer-caret').textContent = isOpen ? '▾' : '▴';
+    });
+  }
 })();
