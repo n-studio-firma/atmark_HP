@@ -1587,16 +1587,20 @@ body.is-store .footer { background: var(--bg); }
 .nav__drawer-store-btn {
   background: none;
   border: none;
-  color: inherit;
+  color: var(--text);
   font: inherit;
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  padding: 0;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  padding: 18px 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 6px;
+  width: 100%;
+  transition: color 0.15s;
 }
+.nav__drawer-store-btn:hover { color: var(--accent); }
+.nav__drawer-item--store { border-bottom: 1px solid var(--border); }
 .nav__drawer-caret {
   font-size: 0.75em;
   transition: transform 0.2s;
