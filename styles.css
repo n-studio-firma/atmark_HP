@@ -1,0 +1,558 @@
+/* =========================================================
+   @atmark 難波本店 ストアページ — styles.css
+   Design: 紫アクセント (#7E3FA1) / body bg #C6C6C6
+   ========================================================= */
+
+:root {
+  --bg:           #EEEEEE;
+  --surface:      #FFFFFF;
+  --text:         #333333;
+  --text-soft:    #555555;
+  --text-mute:    #888888;
+  --accent:       #7E3FA1;
+  --accent-light: #EBDCF3;
+  --border:       #DADADA;
+
+  --sp-xs: 24px;
+  --sp-s:  40px;
+  --sp-m:  64px;
+  --sp-l:  96px;
+
+  --font-serif: "Noto Serif JP", "Yu Mincho", "游明朝", "Hiragino Mincho ProN", serif;
+  --font-sans:  "Noto Sans JP", "Yu Gothic", "游ゴシック", "Hiragino Sans", system-ui, sans-serif;
+
+  --container: 1200px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; text-decoration: none; }
+
+ul, ol { list-style: none; margin: 0; padding: 0; }
+
+dl, dd { margin: 0; }
+
+button { font: inherit; cursor: pointer; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--sp-s);
+}
+
+/* =========================================================
+   Logo
+   ========================================================= */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+}
+.logo__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+}
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.logo__name {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  white-space: nowrap;
+}
+.logo__sub {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--text-mute);
+  margin-top: 2px;
+  white-space: nowrap;
+}
+.logo--sm .logo__mark { width: 32px; height: 32px; font-size: 19px; }
+.logo--sm .logo__name { font-size: 19px; }
+.logo--sm .logo__sub  { font-size: 9px; }
+.logo__img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+.logo--sm .logo__img { height: 36px; }
+
+/* =========================================================
+   Header
+   ========================================================= */
+.header {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.header__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px var(--sp-s);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-s);
+}
+
+.nav { display: flex; align-items: center; gap: var(--sp-s); }
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.nav__list a {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+.nav__list a:hover { color: var(--accent); }
+.nav__list a.is-active {
+  color: var(--accent);
+}
+.nav__list a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1.5px;
+  background: var(--accent);
+}
+.nav__ig {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--text-mute);
+  transition: color 0.2s ease;
+}
+.nav__ig:hover { color: var(--accent); }
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: clamp(360px, 48vw, 540px);
+  overflow: hidden;
+  background: #1a1a1a;
+}
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__overlay {
+  position: absolute;
+  top: clamp(40px, 7vw, 80px);
+  left: clamp(28px, 6vw, 80px);
+  color: #fff;
+  text-shadow: 0 1px 18px rgba(0,0,0,0.35);
+}
+.hero__label {
+  margin: 0 0 18px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+}
+.hero__title {
+  margin: 0 0 12px;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(38px, 6.5vw, 68px);
+  letter-spacing: 0.32em;
+  line-height: 1;
+}
+.hero__en {
+  margin: 0;
+  font-size: clamp(13px, 1.4vw, 16px);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+}
+
+/* =========================================================
+   Concept Lead
+   ========================================================= */
+.lead {
+  text-align: center;
+  padding: var(--sp-l) var(--sp-s);
+}
+.lead__title {
+  margin: 0 auto;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(20px, 2.4vw, 28px);
+  letter-spacing: 0.12em;
+  line-height: 1.9;
+  color: var(--text);
+}
+.lead__divider {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  margin: var(--sp-xs) auto;
+}
+.lead__body {
+  margin: 0 auto;
+  font-size: 13px;
+  line-height: 2;
+  color: var(--text-soft);
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   Section heading
+   ========================================================= */
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-xs);
+  margin: 0 0 var(--sp-m);
+}
+.section-head__title {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--text);
+  white-space: nowrap;
+}
+.section-head__rule {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* =========================================================
+   Store Information
+   ========================================================= */
+.info {
+  padding: var(--sp-s) 0 var(--sp-l);
+}
+.info__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--sp-m);
+  align-items: start;
+}
+.info__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xs);
+}
+.info__row {
+  display: grid;
+  grid-template-columns: 44px 80px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 14px;
+}
+.info__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+.info__row dt {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--text-mute);
+  align-self: center;
+}
+.info__row dd {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  align-self: center;
+}
+
+/* Map */
+.info__map { display: flex; flex-direction: column; align-items: flex-end; gap: var(--sp-xs); }
+.map {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  background: #e6e6e6;
+  overflow: hidden;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.7) contrast(1.05) brightness(1.02);
+}
+.map__pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  z-index: 2;
+}
+.map__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+}
+.map__label {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+  background: rgba(255,255,255,0.85);
+  padding: 2px 8px;
+  letter-spacing: 0.04em;
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.btn--ghost {
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn--ghost:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* =========================================================
+   Gallery
+   ========================================================= */
+.gallery {
+  padding: var(--sp-s) 0 var(--sp-l);
+}
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-xs);
+}
+.gallery__grid figure {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #e6e6e6;
+}
+.gallery__grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================================
+   Store Features
+   ========================================================= */
+.features {
+  padding: var(--sp-s) 0 var(--sp-l);
+}
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--sp-s);
+}
+.feat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+.feat__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+.feat__icon svg { width: 48px; height: 48px; }
+.feat__en {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--text);
+}
+.feat__ja {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--text-soft);
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: var(--sp-s) 0;
+  margin-top: var(--sp-s);
+}
+.footer__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--sp-s);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--sp-s);
+}
+.footer__nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.footer__nav a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+.footer__nav a:hover { color: var(--accent); }
+.footer__copy {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-mute);
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 1023px) {
+  .nav__list { gap: 22px; }
+  .nav__list a { font-size: 12px; }
+  .logo__sub { display: none; }
+  .info__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-s);
+  }
+  .map { height: 320px; }
+  .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  .features__grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: var(--sp-m);
+  }
+  .footer__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--sp-xs);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  body { font-size: 13px; }
+
+  .header__inner { padding: 10px 20px; gap: 12px; }
+
+  .logo { gap: 8px; }
+  .logo__mark { width: 30px; height: 30px; font-size: 18px; }
+  .logo__name { font-size: 18px; }
+
+  .nav__list { gap: 14px; }
+  .nav__list a { font-size: 10.5px; letter-spacing: 0.08em; }
+  .nav__list li:nth-child(n+5) { display: none; } /* HOME ABOUT STORE MENU のみ表示 */
+  .nav__ig { display: none; }
+
+  .hero { height: 360px; }
+  .hero__overlay { top: 36px; left: 24px; }
+  .hero__title {
+    font-size: 38px;
+    letter-spacing: 0.2em;
+  }
+
+  .lead { padding: var(--sp-m) var(--sp-xs); }
+  .lead__title { font-size: 19px; letter-spacing: 0.06em; }
+
+  .container { padding: 0 var(--sp-xs); }
+
+  .info { padding: var(--sp-s) 0 var(--sp-m); }
+  .info__row { grid-template-columns: 38px 64px 1fr; gap: 12px; }
+  .info__icon { width: 32px; height: 32px; }
+  .info__icon svg { width: 18px; height: 18px; }
+  .info__row dd { font-size: 14px; }
+
+  .gallery__grid { grid-template-columns: 1fr; }
+  .features__grid { grid-template-columns: repeat(2, 1fr); row-gap: var(--sp-s); }
+  .feat__icon { width: 64px; height: 64px; }
+
+  .footer__nav ul { gap: 16px; }
+  .footer__nav a { font-size: 11px; }
+}
