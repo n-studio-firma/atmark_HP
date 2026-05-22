@@ -1146,7 +1146,7 @@ body.is-store .footer { background: var(--bg); }
 .recruit-vision {
   display: flex;
   align-items: flex-start;
-  gap: 48px;
+  gap: 135px;
   margin-bottom: 56px;
 }
 .recruit-vision__img {
