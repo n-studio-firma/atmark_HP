@@ -39,4 +39,15 @@
       storeBtn.querySelector('.nav__drawer-caret').textContent = isOpen ? '▾' : '▴';
     });
   }
+
+  /* ---- フッター STORE アコーディオン ---- */
+  var footerStoreBtn = document.querySelector('.footer__store-btn');
+  var footerStoreSub = document.querySelector('.footer__store-sub');
+  if (footerStoreBtn && footerStoreSub) {
+    footerStoreBtn.addEventListener('click', function () {
+      var isOpen = footerStoreSub.classList.contains('is-open');
+      footerStoreSub.classList.toggle('is-open', !isOpen);
+      footerStoreBtn.querySelector('.footer__store-caret').textContent = isOpen ? '▾' : '▴';
+    });
+  }
 })();
