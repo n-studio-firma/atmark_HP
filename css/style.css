@@ -1146,7 +1146,6 @@ body.is-store .footer { background: var(--bg); }
 .recruit-vision {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
   gap: 48px;
   margin-bottom: 56px;
 }
@@ -1172,7 +1171,7 @@ body.is-store .footer { background: var(--bg); }
   filter: brightness(0.95) saturate(0.88);
 }
 .recruit-vision__text {
-  flex: 0 0 52%;
+  flex: 1;
   margin-top: 56px;
 }
 .recruit-vision__lead {
