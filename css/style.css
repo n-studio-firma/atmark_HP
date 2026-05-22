@@ -1031,6 +1031,68 @@ body.is-store .footer { background: var(--bg); }
 /* ---------------------------------------------------------
    15. RECRUIT
    --------------------------------------------------------- */
+/* ---- Privacy Policy ---- */
+.privacy-content {
+  padding: var(--sp-m) 0 var(--sp-xl);
+}
+.privacy-body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.privacy-intro {
+  margin-bottom: var(--sp-m);
+  line-height: 1.9;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.privacy-section {
+  margin-bottom: var(--sp-m);
+  padding-bottom: var(--sp-m);
+  border-bottom: 1px solid var(--border);
+}
+.privacy-section:last-of-type {
+  border-bottom: none;
+}
+.privacy-section__title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.privacy-section p {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.privacy-section ul {
+  margin: 8px 0 0 1.2em;
+  padding: 0;
+}
+.privacy-section ul li {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+.privacy-address {
+  font-style: normal;
+  margin-top: 12px;
+}
+.privacy-address p {
+  margin-bottom: 4px;
+}
+.privacy-address a {
+  color: var(--text);
+  text-decoration: underline;
+}
+.privacy-date {
+  margin-top: var(--sp-m);
+  font-size: 0.8rem;
+  color: var(--text-mute, #888);
+  text-align: right;
+}
+
 .recruit-content {
   padding: 0 0 var(--sp-l);
   background: var(--surface);
