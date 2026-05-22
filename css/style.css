@@ -1513,7 +1513,7 @@ body.is-store .footer { background: var(--bg); }
   .gallery__grid { grid-template-columns: 1fr; }
 
   /* Footer nav */
-  .footer__nav ul { gap: 16px; }
+  .footer__nav ul { gap: 12px; flex-wrap: nowrap; }
 
   /* Tables */
   .corp-table th, .recruit-table th {
