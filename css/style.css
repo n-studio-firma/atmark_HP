@@ -709,9 +709,9 @@ body.is-store .footer { background: var(--bg); }
 }
 .store-lead__divider {
   display: block;
-  width: 40px;
-  height: 1px;
-  background: var(--accent);
+  width: 1px;
+  height: 56px;
+  background: var(--text-mute);
   margin: var(--sp-xs) auto;
 }
 .store-lead__body {
