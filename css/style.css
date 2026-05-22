@@ -1512,8 +1512,8 @@ body.is-store .footer { background: var(--bg); }
   /* Gallery */
   .gallery__grid { grid-template-columns: 1fr; }
 
-  /* Footer nav */
-  .footer__nav ul { gap: 12px; flex-wrap: nowrap; }
+  /* Footer nav — 3+2 layout */
+  .footer__nav ul { gap: 14px 20px; flex-wrap: wrap; max-width: 230px; }
 
   /* Tables */
   .corp-table th, .recruit-table th {
@@ -1633,18 +1633,18 @@ body.is-store .footer { background: var(--bg); }
 .footer__store-btn {
   background: none;
   border: none;
-  color: var(--text-light, #999);
+  color: inherit;
   font: inherit;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  font-size: 11px;
+  letter-spacing: 0.14em;
   padding: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 4px;
-  transition: color 0.15s;
+  transition: color 0.2s;
 }
-.footer__store-btn:hover { color: var(--text); }
+.footer__store-btn:hover { color: var(--accent); }
 .footer__store-caret {
   font-size: 0.7em;
   transition: transform 0.2s;
