@@ -1661,7 +1661,7 @@ body.is-store .footer { background: var(--bg); }
   .ceo-body__col p:last-child { margin-bottom: 1.8em; }
   .ceo-footer {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 28px;
   }
   .ceo-footer__sig { text-align: right; }
