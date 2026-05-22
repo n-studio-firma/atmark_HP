@@ -1537,7 +1537,7 @@ body.is-store .footer { background: var(--bg); }
 
   /* Recruit */
   .recruit-vision { flex-direction: column; gap: 28px; }
-  .recruit-vision__img { flex: none; width: 100%; height: 240px; }
+  .recruit-vision__img { display: none; }
   .recruit-vision__text { margin-top: 0; padding-left: 0; }
   .recruit-vision__lead { font-size: 13px; }
   .recruit-vision__catches li { font-size: 16px; display: table; }
