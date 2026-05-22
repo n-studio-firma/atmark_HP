@@ -1639,7 +1639,7 @@ body.is-store .footer { background: var(--bg); }
   letter-spacing: 0.14em;
   padding: 0;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 4px;
   transition: color 0.2s;
@@ -1650,22 +1650,30 @@ body.is-store .footer { background: var(--bg); }
   transition: transform 0.2s;
 }
 .footer__store-sub {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
   list-style: none;
-  margin: 6px 0 0;
-  padding: 0;
+  margin: 0;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  white-space: nowrap;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
+  z-index: 10;
 }
 .footer__store-sub.is-open {
   max-height: 120px;
 }
 .footer__store-sub li a {
   display: block;
-  padding: 3px 0 3px 10px;
-  font-size: 0.7rem;
-  color: var(--text-light, #999);
+  padding: 4px 0;
+  font-size: 11px;
+  color: var(--text-mute, #888);
   text-decoration: none;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
 }
-.footer__store-sub li a:hover { color: var(--text); }
+.footer__store-sub li a:hover { color: var(--accent); }
