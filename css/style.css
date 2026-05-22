@@ -282,7 +282,7 @@ body.is-store .footer { background: var(--bg); }
   text-decoration: none;
   transition: color 0.2s;
 }
-.footer__privacy-link:hover { color: var(--text); }
+.footer__privacy-link:hover { color: #7c5cbf; }
 .cta-privacy {
   display: block;
   margin-top: 16px;
@@ -292,7 +292,7 @@ body.is-store .footer { background: var(--bg); }
   text-decoration: none;
   transition: color 0.2s;
 }
-.cta-privacy:hover { color: var(--text); }
+.cta-privacy:hover { color: #7c5cbf; }
 .footer__copy {
   margin: 0;
   font-size: 11px;
