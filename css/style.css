@@ -1664,7 +1664,7 @@ body.is-store .footer { background: var(--bg); }
     align-items: flex-start;
     gap: 28px;
   }
-  .ceo-footer__sig { text-align: left; }
+  .ceo-footer__sig { text-align: right; }
 }
 
 /* ---- ドロワー STORE アコーディオン ---- */
