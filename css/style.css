@@ -854,6 +854,7 @@ body.is-store .footer { background: var(--bg); }
 .store-ig {
   padding: var(--sp-s) 0 var(--sp-m);
   text-align: center;
+  margin-top: -100px;
 }
 .store-ig a {
   display: inline-flex;
