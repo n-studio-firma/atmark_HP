@@ -889,7 +889,6 @@ body.is-store .footer { background: var(--bg); }
 /* Other Stores */
 .other-stores {
   padding: var(--sp-m) 0 var(--sp-l);
-  border-top: 1px solid var(--border);
 }
 .other-stores__head {
   text-align: center;
