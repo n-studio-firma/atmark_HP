@@ -21,7 +21,7 @@
     rel="stylesheet">
   <link rel="icon" href="../../images/common/favicon.png" type="image/png">
   <link rel="stylesheet" href="../../css/style.css">
-  <script src="../../js/loading.js"></script>
+  <script src="../../js/loading.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,78 +43,18 @@
       "opens": "11:00",
       "closes": "22:00"
     },
+    "priceRange": "¥¥",
+    "servesCuisine": ["アサイーボウル", "グリークヨーグルト"],
     "sameAs": "https://www.instagram.com/atmark.nakazakichou"
   }
   </script>
 </head>
 
 <body class="is-store">
-  <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
-
-  <header class="header">
-    <div class="header__inner">
-      <a href="../../index.html" class="logo" aria-label="at mark home">
-        <img src="../../images/common/logo.png" alt="" class="logo__img">
-      </a>
-      <nav class="nav" aria-label="primary">
-        <ul class="nav__list">
-          <li><a href="../../index.html">HOME</a></li>
-          <li><a href="../../about/index.html">ABOUT</a></li>
-          <li class="nav__item--dd">
-            <a href="#" class="is-active" aria-current="page">STORE<span class="nav__caret"> ▾</span></a>
-            <ul class="nav__dropdown">
-              <li><a href="../../store/namba/index.html">難波本店</a></li>
-              <li><a href="../../store/nakazakicho/index.html" class="is-active">中崎町店</a></li>
-              <li><a href="../../store/fukuoka/index.html">福岡店</a></li>
-            </ul>
-          </li>
-          <li><a href="../../recruit/index.html">RECRUIT</a></li>
-          <li><a href="../../contact/index.html">CONTACT</a></li>
-        </ul>
-        <a href="https://www.instagram.com/atmark.acai?igsh=MmFkdWY1Mmg0eDNp" class="nav__ig" target="_blank"
-          rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"
-            aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
-            <circle cx="12" cy="12" r="4" />
-            <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" />
-          </svg>
-        </a>
-        <button class="nav__hamburger" aria-label="メニューを開く" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <div class="nav__drawer" aria-hidden="true">
-    <button class="nav__drawer-close" aria-label="メニューを閉じる">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
-    <ul class="nav__drawer-list">
-      <li><a href="../../index.html">HOME</a></li>
-      <li><a href="../../about/index.html">ABOUT</a></li>
-      
-      
-      
-            <li class="nav__drawer-item--store">
-        <button class="nav__drawer-store-btn" aria-expanded="false">STORE <span class="nav__drawer-caret">▾</span></button>
-        <ul class="nav__drawer-sub">
-          <li><a href="../../store/namba/index.html">難波本店</a></li>
-          <li><a href="../../store/nakazakicho/index.html">中崎町店</a></li>
-          <li><a href="../../store/fukuoka/index.html">福岡店</a></li>
-        </ul>
-      </li>
-      <li><a href="../../recruit/index.html">RECRUIT</a></li>
-      <li><a href="../../contact/index.html">CONTACT</a></li>
-    </ul>
-  </div>
-  <div class="nav__overlay"></div>
+  <script src="../../js/header.js"></script>
 
   <section id="main-content" class="hero-sub" aria-label="中崎町店">
-    <img class="hero-sub__img" src="../../images/common/hero.jpg" alt="" loading="eager">
+    <img class="hero-sub__img" src="../../images/common/hero.jpg" alt="" loading="eager" width="1800" height="1234">
     <div class="hero-sub__overlay">
       <p class="hero-sub__label">STORE</p>
       <h1 class="hero-sub__title">中崎町店</h1>
@@ -210,9 +150,9 @@
         <span class="section-head__rule" aria-hidden="true"></span>
       </h2>
       <div class="gallery__grid">
-        <figure><img src="../../images/store/nakazakicho/exterior-01.jpg" alt="中崎町店 外観" loading="lazy"></figure>
-        <figure><img src="../../images/store/nakazakicho/interior-01.jpg" alt="中崎町店 店内の様子" loading="lazy"></figure>
-        <figure><img src="../../images/store/nakazakicho/interior-02.jpg" alt="中崎町店 内装" loading="lazy"></figure>
+        <figure><img src="../../images/store/nakazakicho/exterior-01.jpg" alt="中崎町店 外観" loading="lazy" width="1114" height="1470"></figure>
+        <figure><img src="../../images/store/nakazakicho/interior-01.jpg" alt="中崎町店 店内の様子" loading="lazy" width="1179" height="1167"></figure>
+        <figure><img src="../../images/store/nakazakicho/interior-02.jpg" alt="中崎町店 内装" loading="lazy" width="5712" height="4284"></figure>
       </div>
     </div>
   </section>
@@ -313,7 +253,7 @@
       <div class="other-stores__tiles">
         <a href="../namba/index.html" class="other-stores__tile">
           <div class="other-stores__tile-img">
-            <img src="../../images/store/namba/interior-01.jpg" alt="難波本店" loading="lazy">
+            <img src="../../images/store/namba/interior-01.jpg" alt="難波本店" loading="lazy" width="1108" height="1477">
           </div>
           <div class="other-stores__tile-body">
             <p class="other-stores__tile-en">NAMBA</p>
@@ -323,7 +263,7 @@
         </a>
         <a href="../fukuoka/index.html" class="other-stores__tile">
           <div class="other-stores__tile-img">
-            <img src="../../images/store/fukuoka/exterior-01.jpg" alt="福岡店" loading="lazy">
+            <img src="../../images/store/fukuoka/exterior-01.jpg" alt="福岡店" loading="lazy" width="1108" height="1477">
           </div>
           <div class="other-stores__tile-body">
             <p class="other-stores__tile-en">FUKUOKA</p>
@@ -335,31 +275,8 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="footer__inner">
-      <a href="../../index.html" class="logo logo--sm" aria-label="at mark home">
-        <img src="../../images/common/logo.png" alt="" class="logo__img">
-      </a>
-      <nav class="footer__nav" aria-label="footer">
-        <ul>
-          <li><a href="../../index.html">HOME</a></li>
-          <li><a href="../../about/index.html">ABOUT</a></li>
-          <li class="footer__nav-item--store">
-            <button class="footer__store-btn">STORE <span class="footer__store-caret">▾</span></button>
-            <ul class="footer__store-sub">
-              <li><a href="../../store/namba/index.html">難波本店</a></li>
-              <li><a href="../../store/nakazakicho/index.html">中崎町店</a></li>
-              <li><a href="../../store/fukuoka/index.html">福岡店</a></li>
-            </ul>
-          </li>
-          <li><a href="../../recruit/index.html">RECRUIT</a></li>
-          <li><a href="../../contact/index.html">CONTACT</a></li>
-        </ul>
-      </nav>
-      <p class="footer__copy">© atmark株式会社</p>
-    </div>
-    <div class="footer__bottom"><a href="../../privacy/index.html" class="footer__privacy-link">Privacy Policy</a></div>
-  </footer>
+
+  <script src="../../js/footer.js"></script>
 
   <script src="../../js/nav.js" defer></script>
 </body>
