@@ -19,7 +19,7 @@
     '<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>' +
     '<header class="header"><div class="header__inner">' +
     '<a href="' + root + 'index.html" class="logo" aria-label="at mark home">' +
-    '<img src="' + root + 'images/common/logo.png" alt="" class="logo__img" width="1272" height="1042"></a>' +
+    '<img src="' + root + 'images/common/logo.png" alt="" class="logo__img" height="44"></a>' +
     '<nav class="nav" aria-label="primary"><ul class="nav__list">' +
     '<li><a href="' + root + 'index.html"' + ca(atHome) + '>HOME</a></li>' +
     '<li><a href="' + root + 'about/index.html"' + ca(atAbout) + '>ABOUT</a></li>' +

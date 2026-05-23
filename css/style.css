@@ -979,6 +979,12 @@ body.is-store .footer { background: var(--bg); }
   color: var(--accent);
   gap: 10px;
 }
+@media (max-width: 1023px) {
+  .other-stores__tiles {
+    max-width: 75%;
+    gap: 40px;
+  }
+}
 @media (max-width: 767px) {
   .other-stores__tiles {
     max-width: 100%;
@@ -1884,3 +1890,22 @@ body.is-store .footer { background: var(--bg); }
   letter-spacing: 0.08em;
 }
 .footer__store-sub li a:hover { color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-c__visual img,
+  .hero-sub__img {
+    animation: none;
+  }
+  .loading,
+  .loading__ring,
+  .loading__logo,
+  .loading__brand {
+    transition: none;
+  }
+  .loading__ring,
+  .loading__logo,
+  .loading__brand {
+    transform: none;
+    opacity: 1;
+  }
+}
