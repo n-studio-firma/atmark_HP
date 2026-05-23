@@ -25,6 +25,7 @@
   --sp-s:  40px;
   --sp-m:  64px;
   --sp-l:  96px;
+  --sp-xl: 128px;
 
   --container:      1200px;
   --container-wide: 1400px;
@@ -52,6 +53,19 @@ a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; margin: 0; padding: 0; }
 dl, dd { margin: 0; }
 button { font: inherit; cursor: pointer; border: none; }
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 13px;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
 
 .container {
   max-width: var(--container);
@@ -526,7 +540,7 @@ body.is-store .footer { background: var(--bg); }
 .page-nav__item:last-child { border-right: none; }
 .page-nav__item:hover { background: #FFFFFF; }
 .page-nav__en {
-  font-family: var(--garamond);
+  font-family: var(--font-garamond);
   font-size: 11px;
   letter-spacing: 0.32em;
   color: var(--accent);
@@ -553,7 +567,7 @@ body.is-store .footer { background: var(--bg); }
 }
 .page-nav__arrow {
   margin-top: auto;
-  font-family: var(--garamond);
+  font-family: var(--font-garamond);
   font-size: 18px;
   color: var(--accent);
   transition: transform 0.2s;
@@ -872,6 +886,92 @@ body.is-store .footer { background: var(--bg); }
   filter: brightness(1) saturate(1);
 }
 
+/* Other Stores */
+.other-stores {
+  padding: var(--sp-m) 0 var(--sp-l);
+  border-top: 1px solid var(--border);
+}
+.other-stores__head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.other-stores__label {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--text-mute);
+  margin: 0 0 10px;
+}
+.other-stores__rule {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+  margin: 0 auto;
+}
+.other-stores__tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 50%;
+  margin: 0 auto;
+}
+.other-stores__tile {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+.other-stores__tile-img {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+.other-stores__tile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+.other-stores__tile:hover .other-stores__tile-img img {
+  transform: scale(1.04);
+}
+.other-stores__tile-body {
+  padding: 14px 4px 0;
+}
+.other-stores__tile-en {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  color: var(--text-mute);
+  margin: 0 0 4px;
+}
+.other-stores__tile-ja {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+.other-stores__tile-link {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--text-mute);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s, gap 0.2s;
+}
+.other-stores__tile:hover .other-stores__tile-link {
+  color: var(--accent);
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .other-stores__tiles {
+    max-width: 100%;
+    gap: 32px;
+  }
+}
+
 /* Instagram CTA in store */
 .store-ig {
   padding: var(--sp-s) 0 var(--sp-m);
@@ -1049,6 +1149,7 @@ body.is-store .footer { background: var(--bg); }
 
 .about-map { padding: 0 0 var(--sp-l); background: var(--surface); }
 .about-map .map { height: 320px; }
+.about-map .map-actions { margin-top: 16px; text-align: right; }
 
 /* ---------------------------------------------------------
    15. RECRUIT
@@ -1322,6 +1423,12 @@ body.is-store .footer { background: var(--bg); }
 .contact-content {
   padding: var(--sp-m) 0 var(--sp-l);
   background: var(--surface);
+}
+.contact-content .container {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: var(--sp-xl);
+  margin-top: -100px;
 }
 .form { max-width: 680px; margin: 0 auto; }
 .form__field { margin-bottom: 28px; }
